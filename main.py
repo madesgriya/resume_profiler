@@ -8,11 +8,6 @@ from resume_profiler.crew import ResumeProfiler
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
-# This main file is intended to be a way for you to run your
-# crew locally, so refrain from adding unnecessary logic into this file.
-# Replace with inputs you want to test with, it will automatically
-# interpolate any tasks and agents information
-
 def run():
     """
     Run the crew.
@@ -20,7 +15,8 @@ def run():
     global inputs
     inputs = {
         'job_url': 'https://www.linkedin.com/jobs/view/4247758294',
-        'current_year': str(datetime.now().year)
+        'personal_writeup': ""
+
     }
     try:
         ResumeProfiler().crew().kickoff(inputs=inputs)
